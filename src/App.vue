@@ -39,6 +39,6 @@ export default {
   }
   .box {
     padding: 0 20px;
-    max-width: 1240px;
+    max-width: 1440px;
   }
 </style>
