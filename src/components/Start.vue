@@ -1,14 +1,26 @@
 <template>
   <div class="start">
     <div class="box start__box">
-      <a href="/">
+      <a href="#">
           <img class="start__logo" src="@/assets/img/logo.png" alt="logo">
       </a>
-      <Menu class="start__desktop-menu"></Menu>
-      <MobileMenu v-if="mobileMenuToogle"></MobileMenu>
-      <div class="start__toogle" @click="toogle">
-        <img src="../assets/img/mmt_x.png" alt="mmtx" v-if="mobileMenuToogle">
-        <img src="../assets/img/mmt.png" alt="mmt" v-else>
+      <Menu class="start__desktop-menu"/>
+      <MobileMenu />
+      <div class="start__toogle">
+        <img 
+          class="start__toogle_open"
+          src="@/assets/img/mmt.png" 
+          alt="mmt"
+          id="open"
+          @click="mmOpen"
+        >
+        <img 
+          class="start__toogle_close"
+          src="@/assets/img/mmt_x.png" 
+          alt="mmtx"
+          id="close"
+          @click="mmClose"
+        >
       </div>
     </div>
     <div class="start__bgi"></div>
@@ -17,27 +29,37 @@
     <div class="start__x2"></div>
   </div>
   <div 
-     v-if="mobileMenuToogle"
      class="start__bb"
+     id="bb"
   >
   </div>
 </template>
 
 <script>
-import Header from './Header.vue';
 import Menu from './Menu.vue';
 import MobileMenu from './MobileMenu.vue';
 export default {
-  components: { Header, Menu, MobileMenu },
+  components: { Menu, MobileMenu },
 
   data() {
     return {
-      mobileMenuToogle: false, 
+
     }
   },
   methods: {
-    toogle() {
-      this.mobileMenuToogle = !this.mobileMenuToogle;
+    mmOpen() {
+        document.body.classList.add('hidden');
+        document.getElementById('mm').classList.add('active-block');
+        document.getElementById('bb').classList.add('active-block');
+        document.getElementById('close').classList.add('active-block');
+        document.getElementById('open').classList.add('deactive-block');
+    },
+    mmClose() {
+        document.body.classList.remove('hidden');
+        document.getElementById('mm').classList.remove('active-block');
+        document.getElementById('bb').classList.remove('active-block');
+        document.getElementById('close').classList.remove('active-block');
+        document.getElementById('open').classList.remove('deactive-block');
     }
   }
 }
@@ -50,7 +72,6 @@ export default {
     height: 100vh;
     background-color: #17191D;
     overflow: hidden;
-
     &__box {
       position: absolute;
       top: 30px;
@@ -75,14 +96,20 @@ export default {
     &__toogle {
       width: 24px;
       height: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: relative;
       &:hover {
         cursor: pointer;
       }
       @media (min-width: 768px) {
         display: none;
+      }
+      &_open {
+        position: absolute;
+      }
+      &_close {
+        position: absolute;
+        transform: translate(0, -2000%);
+        transition: 500ms;
       }
     }
     &__bgi {
@@ -108,7 +135,7 @@ export default {
       background-position: center;
       @media (max-width: 768px) {
         top: 112px;
-        left: 26%;
+        left: 24%;
       }
     }
     &__x1 {
@@ -144,6 +171,8 @@ export default {
       width: 100%;
       height: 100vh;
       backdrop-filter: blur(60px);
+      transform: translate(0, -200%);
+      transition: 500ms;
     }
   }
 </style>

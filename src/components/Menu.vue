@@ -1,16 +1,16 @@
 <template>
   <div class="menu">
     <ul class="menu__list">
-      <a href="/" class="menu__item">
+      <a href="#" class="menu__item" @click="removeHiden">
         <li>home</li>
       </a>
-      <a href="/partners" class="menu__item">
+      <a href="#partners" class="menu__item" @click="removeHiden">
         <li>our partners</li>
       </a>
-      <a href="/team" class="menu__item">
+      <a href="#team" class="menu__item" @click="removeHiden">
         <li>our team</li>
       </a>
-      <a href="/contacts" class="menu__item">
+      <a href="#contacts" class="menu__item" @click="removeHiden">
         <li>contact us</li>
       </a>
     </ul>
@@ -19,7 +19,17 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+    }
+  },
+  methods: {
+    removeHiden() {
+      document.body.classList.remove('hidden');
+      document.getElementById('mm').classList.remove('active-block');
+      document.getElementById('bb').classList.remove('active-block');
+    }
+  }
 }
 </script>
 

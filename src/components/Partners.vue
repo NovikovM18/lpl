@@ -1,5 +1,5 @@
 <template>
-  <div class="partners">
+  <div class="partners" id="partners">
     <div class="box partners__box">
       <h1 class="partners__title">Our Partners</h1>
       <div class="partners__content">

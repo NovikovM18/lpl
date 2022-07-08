@@ -1,5 +1,5 @@
 <template>
-  <div class="mm">
+  <div class="mm" id="mm">
     <Menu />
     <Social />
   </div>
@@ -23,6 +23,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transform: translate(0, -200%);
+  transition: 500ms;
   &__menu {
     display: flex;
     flex-direction: column;
