@@ -105,6 +105,7 @@ export default {
       }
       &_open {
         position: absolute;
+        transition: 500ms;
       }
       &_close {
         position: absolute;
@@ -118,7 +119,7 @@ export default {
       left: 0;
       width: 100%;
       height: 85vh;
-      background-image: url('../assets/img/start_bg.png');
+      background-image: url('@/assets/img/start_bg.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -129,7 +130,7 @@ export default {
       left: 22%;
       width: 256px;
       height: 256px;
-      background-image: url('../assets/img/start_c.png');
+      background-image: url('@/assets/img/start_c.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -144,7 +145,7 @@ export default {
       left: 10%;
       width: 148px;
       height: 148px;
-      background-image: url('../assets/img/start_x1.png');
+      background-image: url('@/assets/img/start_x1.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -159,7 +160,7 @@ export default {
       transform: translate(0, -50%);
       width: 266px;
       height: 266px;
-      background-image: url('../assets/img/start_x2.png');
+      background-image: url('@/assets/img/start_x2.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;

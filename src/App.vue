@@ -1,6 +1,6 @@
 <template>
-  <Start />
-  <Partners />
+  <!-- <Start />
+  <Partners /> -->
   <Team />
   <Contacts />
   <Footer />
