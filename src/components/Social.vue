@@ -2,16 +2,16 @@
   <div class="social">
     <div class="social__box">
       <a href="" class="social__item">
-        <img src="@/assets/img/facebook-box-line.png" alt="">
+        <img src="@/assets/img/facebook-box-line.png" alt="icon" target="_blank">
       </a>
       <a href="" class="social__item">
-        <img src="@/assets/img/twitter-line.png" alt="">
+        <img src="@/assets/img/twitter-line.png" alt="icon" target="_blank">
       </a>
       <a href="" class="social__item">
-        <img src="@/assets/img/linkedin-box-line.png" alt="">
+        <img src="@/assets/img/linkedin-box-line.png" alt="icon" target="_blank">
       </a>
       <a href="" class="social__item">
-        <img src="@/assets/img/instagram-line.png" alt="">
+        <img src="@/assets/img/instagram-line.png" alt="icon" target="_blank">
       </a>
     </div>
     <p class="social__text">Privacy Policy</p>

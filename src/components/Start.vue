@@ -149,9 +149,9 @@ export default {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      @media (max-width: 768px) {
-        display: none;
-      }
+        @media (max-width: 768px) {
+          display: none;
+        }
     }
     &__x2 {
       position: absolute;
