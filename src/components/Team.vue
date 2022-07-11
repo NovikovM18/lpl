@@ -234,7 +234,7 @@ export default {
     }
   }
   .text {
-    min-width: 430px;
+    // min-width: 430px;
     width: 430px;
     height: auto;
       @media (max-width: 768px) {

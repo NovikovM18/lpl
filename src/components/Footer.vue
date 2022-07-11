@@ -75,7 +75,7 @@ export default {
     position: relative;
     padding: 120px 70px 132px;
     width: 100%;
-    height: 570px;
+    height: auto;
     background-color: #17191D;
     color: #fff;
       @media (max-width: 768px) {

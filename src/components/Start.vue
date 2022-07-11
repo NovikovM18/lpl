@@ -2,7 +2,7 @@
   <div class="start">
     <div class="box start__box">
       <a href="#">
-          <img class="start__logo" src="@/assets/img/logo.png" alt="logo">
+        <img class="start__logo" src="@/assets/img/logo.png" alt="logo">
       </a>
       <Menu class="start__desktop-menu"/>
       <MobileMenu />
@@ -27,6 +27,24 @@
     <div class="start__c"></div>
     <div class="start__x1"></div>
     <div class="start__x2"></div>
+    <div class="start__modal">
+      <h1 class="start__modal_title">Email marceting for fast-growing startups</h1>
+      <p class="start__modal_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id ut cursus dictum purus enim in in urna, suspendisse. Mauris, mollis sed sed ac.</p>
+      <div class="start__modal_bb">
+        <a 
+          href="#contacts"
+          class="start__modal_start"
+        >
+          Start Now
+        </a>
+        <a 
+          href="#partners"
+          class="start__modal_read"
+        >
+          Read More
+        </a>
+      </div>
+    </div>
   </div>
   <div 
      class="start__bb"
@@ -42,13 +60,11 @@ export default {
   components: { Menu, MobileMenu },
 
   data() {
-    return {
-
-    }
+    return { }
   },
   methods: {
     mmOpen() {
-        document.body.classList.add('hidden');
+      document.body.classList.add('hidden');
         document.getElementById('mm').classList.add('active-block');
         document.getElementById('bb').classList.add('active-block');
         document.getElementById('close').classList.add('active-block');
@@ -72,6 +88,96 @@ export default {
     height: 100vh;
     background-color: #17191D;
     overflow: hidden;
+    &__modal {
+      position: absolute;
+      width: 75%;
+      height: auto;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      background: linear-gradient(104.93deg, rgba(122, 122, 122, 0.19) 1.86%, rgba(122, 122, 122, 0) 104.73%);
+      filter: drop-shadow(0px 4px 4px rgba(50, 50, 50, 0.15));
+      backdrop-filter: blur(100px);
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 72px 40px;
+        @media (max-width: 768px) {
+          width: 90%;
+          padding: 56px 24px;
+        }
+      &_title {
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 83px;
+        text-align: center;
+        color: #FFF;
+          @media (max-width: 768px) {
+            font-size: 34px;
+            line-height: 39px;
+          }
+      }
+      &_p {
+        margin-top: 40px;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFF;
+          @media (max-width: 768px) {
+            font-size: 16px;
+            line-height: 20px;
+          }
+      }
+      &_bb {
+        margin-top: 114px;
+        display: flex;
+        gap: 60px;
+          @media (max-width: 768px) {
+            margin-top: 40px;
+            flex-direction: column;
+            gap: 30px;
+          }
+      }
+      &_start {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 284px;
+        height: 64px;
+        background: #FF0B53;
+        border-radius: 36px;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: #FBFBFB;
+          @media (max-width: 768px) {
+            font-size: 20px;
+            line-height: 23px;
+          }
+      }
+      &_read {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 284px;
+        height: 64px;
+        border: 1px solid #FFFFFF;
+        border-radius: 36px;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: #FBFBFB;
+          @media (max-width: 768px) {
+            font-size: 20px;
+            line-height: 23px;
+          }
+      }
+    }
     &__box {
       position: absolute;
       top: 30px;

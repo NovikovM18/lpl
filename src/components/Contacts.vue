@@ -169,7 +169,7 @@ export default {
     background-color: #F8F8F8;
       @media (max-width: 768px) {
         padding: 50px 0;
-        height: 110vh;
+        // height: 110vh;
       }
     &__box  {
       position: absolute;
@@ -316,6 +316,10 @@ export default {
         font-size: 20px;
         line-height: 23px;
         color: #101020;
+          @media (max-width: 768px) {
+            width: 335px;
+            height: 50px;
+          }
       }
       &_i {
         display: none;

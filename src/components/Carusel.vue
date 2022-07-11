@@ -79,9 +79,11 @@ export default {
       this.info = s;
       this.showModal = true;
       console.log(this.info);
+      document.body.classList.add('hidden');
     },
     closeModal() {
       this.showModal = false;
+      document.body.classList.remove('hidden');
     }
   },
   mounted() {

@@ -28,7 +28,9 @@ export default {
       document.body.classList.remove('hidden');
       document.getElementById('mm').classList.remove('active-block');
       document.getElementById('bb').classList.remove('active-block');
-    }
+      document.getElementById('close').classList.remove('active-block');
+      document.getElementById('open').classList.remove('deactive-block');
+  }
   }
 }
 </script>

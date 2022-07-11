@@ -17,6 +17,7 @@ export default {
 <style lang="scss">
 .mm {
   position: absolute;
+  z-index: 30;
   width: 100%;
   height: 75vh;
   top: 15vh;
