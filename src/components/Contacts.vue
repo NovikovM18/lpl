@@ -4,28 +4,71 @@
     <div class="contacts__g2"></div>
     <div class="box contacts__box">
       <h1 class="contacts__title">Contact Us</h1>
-      <div class="form">
+      <form 
+        class="form"
+        @submit=""
+      >
         <div class="form__fb">
-          <input type="text" class="form__input" placeholder="Your Name">
-          <input type="text" class="form__input" placeholder="Email Address">
+          <input 
+            type="text" 
+            class="form__input" 
+            placeholder="Your Name"
+            v-model.trim="form.name"
+          >
+          <input 
+            type="text" 
+            class="form__input" 
+            placeholder="Email Address"
+            v-model.trim="form.email"
+          >
         </div>
         <div class="form__sb">
-          <input type="text" class="form__input" placeholder="Phone Number">
-          <input type="text" class="form__input" placeholder="Choose your job type">
+          <input 
+            type="text" 
+            class="form__input" 
+            placeholder="Phone Number"
+            v-model.trim="form.phone"
+          >
+          <input 
+            type="text" 
+            class="form__input" 
+            placeholder="Choose your job type"
+            v-model="form.job"
+          >
         </div>
-        <textarea name="" id="" cols="30" rows="10" class="form__ta" placeholder="Messege"></textarea>
+        <textarea 
+          class="form__ta" 
+          placeholder="Messege"
+          v-model.trim="form.messege"
+        >
+        </textarea>
         <div class="form__tb">
           <input type="file" class="form__file">
-          <button class="form__btn">Submit</button>
+          <button 
+            class="form__btn"
+            type="submit"
+          >
+            Submit
+          </button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-
+  data() {
+    return {
+      form: {
+        name: '',
+        email: '',
+        phone: '',
+        job: '',
+        messege: '',
+      }
+    }
+  }
 }
 </script>
 
