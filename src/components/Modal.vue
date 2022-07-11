@@ -36,7 +36,20 @@
           <p class="modal-info__name">Email:</p>
           <p class="modal-info__val">{{info.email}}</p>
         </div>
-        <Social class="modal-info__social"/>
+          <div class="modal-info__social">
+            <a href="" class="modal-info__social_item">
+              <img src="@/assets/img/1.svg" alt="icon" target="_blank">
+            </a>
+            <a href="" class="modal-info__social_item">
+              <img src="@/assets/img/3.svg" alt="icon" target="_blank">
+            </a>
+            <a href="" class="modal-info__social_item">
+              <img src="@/assets/img/4.svg" alt="icon" target="_blank">
+            </a>
+            <a href="" class="modal-info__social_item">
+              <img src="@/assets/img/2.svg" alt="icon" target="_blank">
+            </a>
+          </div>
       </div>
     </div>
     <p class="description">{{info.description}}</p>
@@ -78,6 +91,11 @@ export default {
     background: #FFFFFF;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
+      @media (max-width: 768px) {
+        width: 335px;
+        height: 569px;
+        padding: 20px;
+      }
     &__container {
       z-index: 5;
       position: fixed;
@@ -104,16 +122,26 @@ export default {
     display: flex;
     flex-direction: row;
     gap: 20px;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
     &__photo {
       width: 271px;
       height: 239px;
       border: 1px solid #9A9A9A;
       border-radius: 5px;
+        @media (max-width: 768px) {
+          width: 102px;
+          height: 90px;
+        }
     }
     &__data {
       display: flex;
       flex-direction: column;
       gap: 12px;
+        @media (max-width: 768px) {
+          gap: 15px;
+        }
     }
     &__item {
       display: flex;
@@ -125,6 +153,10 @@ export default {
       font-size: 20px;
       line-height: 23px;
       color: #585858;
+        @media (max-width: 768px) {
+          font-size: 16px;
+          line-height: 18px;
+        }
     }
     &__val {
       padding: 6px 10px;
@@ -134,20 +166,33 @@ export default {
       color: #2C2C2C;
       background-color: #F4F4F4;
       border-radius: 7px;
+        @media (max-width: 768px) {
+          font-size: 16px;
+          line-height: 18px;
+        }
     }
-    &__social > p {
-      display: none;
-    }
-    // &__social > .social__box > a > img {
-    //   color: #FF0B53;
-    // }
     &__social {
       margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
       width: 176px;
       height: 40px;
       background-color: #F4F4F4;
       border-radius: 7px;
       color: #2C2C2C;
+        @media (max-width: 768px) {
+          width: 146px;
+          height: 34px;
+        }
+      &_item > img{
+        width: 30px;
+        height: 30px;
+          @media (max-width: 768px) {
+            width: 24px;
+            height: 24px;
+          }
+      }
     }
   }
   .description {
@@ -156,5 +201,8 @@ export default {
     font-size: 20px;
     line-height: 147%;
     color: #3D3D3D;
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
   }
 </style>
