@@ -1,7 +1,7 @@
 <template>
-  <!-- <Start />
+  <Start />
   <Partners />
-  <Team /> -->
+  <Team />
   <Contacts />
   <Footer />
 </template>

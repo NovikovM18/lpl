@@ -53,11 +53,13 @@ export default {
       color: #101020;
         @media (max-width: 768px) {
           margin-bottom: 40px;
+          font-size: 24px;
+          line-height: 28px;
         }
     }
     &__g1 {
       position: absolute;
-      bottom: 0;
+      bottom: 30px;
       left: 30px;
       width: 423px;
       height: 147px;
