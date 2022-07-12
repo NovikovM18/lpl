@@ -104,9 +104,11 @@ export default {
       align-items: center;
       justify-content: center;
       padding: 72px 40px;
+        @media (max-width: 1124px) {
+          padding: 56px 24px;
+        }
         @media (max-width: 768px) {
           width: 90%;
-          padding: 56px 24px;
         }
         @media (max-width: 360px) {
           width: 90%;
@@ -118,7 +120,7 @@ export default {
         line-height: 83px;
         text-align: center;
         color: #FFF;
-          @media (max-width: 768px) {
+          @media (max-width: 1024px) {
             font-size: 34px;
             line-height: 39px;
           }
@@ -134,7 +136,7 @@ export default {
         line-height: 28px;
         text-align: center;
         color: #FFF;
-          @media (max-width: 768px) {
+          @media (max-width: 1024px) {
             font-size: 16px;
             line-height: 20px;
           }
@@ -147,8 +149,10 @@ export default {
         margin-top: 114px;
         display: flex;
         gap: 60px;
-          @media (max-width: 768px) {
+          @media (max-width: 1124px) {
             margin-top: 40px;
+          }
+          @media (max-width: 768px) {
             flex-direction: column;
             gap: 30px;
           }
@@ -170,7 +174,7 @@ export default {
         font-size: 24px;
         line-height: 28px;
         color: #FBFBFB;
-          @media (max-width: 768px) {
+          @media (max-width: 1024px) {
             width: 240px;
             font-size: 20px;
             line-height: 23px;
@@ -194,7 +198,7 @@ export default {
         font-size: 24px;
         line-height: 28px;
         color: #FBFBFB;
-          @media (max-width: 768px) {
+          @media (max-width: 1024px) {
             width: 240px;
             font-size: 20px;
             line-height: 23px;
@@ -234,7 +238,7 @@ export default {
       &:hover {
         cursor: pointer;
       }
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         display: none;
       }
       &_open {
