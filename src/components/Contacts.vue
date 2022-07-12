@@ -221,6 +221,7 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: max-content;
       @media (max-width: 768px) {
         gap: 15px;
       }
