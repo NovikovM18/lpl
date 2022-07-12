@@ -1,7 +1,6 @@
 <template>
   <div class="contacts" id="contacts">
-    <div class="contacts__g1"></div>
-    <div class="contacts__g2"></div>
+
     <div class="box contacts__box">
       <h1 class="contacts__title">Contact Us</h1>
       <form
@@ -90,6 +89,8 @@
         </div>
       </form>
     </div>
+        <div class="contacts__g1"></div>
+    <div class="contacts__g2"></div>
   </div>
 </template>
 
@@ -147,10 +148,8 @@ export default {
       this.createFile(files[0]);
     },
     createFile(file) {
-      let newFile = new File();
       var reader = new FileReader();
       var vm = this;
-
       reader.onload = (e) => {
         vm.form.cv = e.target.result;
       };
@@ -165,14 +164,13 @@ export default {
     position: relative;
     padding: 120px 50px 284px;
     width: 100%;
-    height: 130vh;
     background-color: #F8F8F8;
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
         padding: 50px 0;
-        height: 110vh;
       }
     &__box  {
-      position: absolute;
+      position: relative;
+      z-index: 5;
       margin: 0 auto;
       z-index: 15;
     }
@@ -198,12 +196,13 @@ export default {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
           display: none;
         }
     }
     &__g2 {
       position: absolute;
+      z-index: 4;
       top: 0;
       right: 0;
       width: 100%;
@@ -212,7 +211,7 @@ export default {
       background-repeat: no-repeat;
       background-size: contain;
       background-position: right;
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
           opacity: 0.5;
         }
     }
@@ -228,7 +227,7 @@ export default {
     &__fb {
       display: flex;
       gap: 20px;
-        @media (max-width: 768px) {
+        @media (max-width: 1022px) {
           flex-direction: column;
           gap: 15px;
         }
@@ -236,7 +235,7 @@ export default {
     &__sb {
       display: flex;
       gap: 20px;
-        @media (max-width: 768px) {
+        @media (max-width: 1022px) {
           flex-direction: column;
           gap: 15px;
         }
@@ -246,11 +245,14 @@ export default {
       display: flex;
       justify-content: space-between;
       gap: 20px;
-        @media (max-width: 768px) {      
-          margin-top: 5px;
+        @media (max-width: 1022px) {      
+          margin-top: 8px;
           flex-direction: column;
           align-items: center;
           gap: 15px;
+        }
+        @media (max-width: 768px) {      
+          gap: 0;
         }
     }
     &__input {
@@ -271,8 +273,12 @@ export default {
           font-size: 16px;
           line-height: 18px;
         }
+        @media (max-width: 360px) {
+          width: 260px;
+        }
     }
     &__ta {
+      font-family: 'Ubuntu', sans-serif;
       padding: 20px;
       max-width: 880px;
       height: 222px;
@@ -283,11 +289,17 @@ export default {
       line-height: 23px;
       color: #585858;
       border: none;
+        @media (max-width: 1022px) {
+          max-width: 430px;
+        }
         @media (max-width: 768px) {
           max-width: 335px;
           height: 193px;
           font-size: 16px;
           line-height: 18px;
+        }
+        @media (max-width: 360px) {
+          width: 260px;
         }
     }
     &__file {
@@ -303,6 +315,9 @@ export default {
       align-items: center;
       justify-content: center;
       gap: 12px;
+        @media (max-width: 360px) {
+          width: 260px;
+        }
       &_img {
         width: 24px;
         height: 24px;
@@ -334,6 +349,9 @@ export default {
           font-size: 20px;
           line-height: 23px;
         }
+        @media (max-width: 360px) {
+          width: 260px;
+        }
     }
   }
   .error {
@@ -354,6 +372,9 @@ export default {
         font-size: 16px;
         line-height: 50px;
       }
+      @media (max-width: 360px) {
+        width: 260px;
+      }
   }
 
   .custom-select .selected {
@@ -361,7 +382,7 @@ export default {
     border-radius: 7px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
     color: #585858;
-    font-weight: 300;
+    font-weight: 400;
     padding-left: 1em;
     cursor: pointer;
     user-select: none;

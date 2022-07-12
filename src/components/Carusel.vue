@@ -2,9 +2,7 @@
   <div class="image-slider swiper-container">
     <Swiper 
       class="image-slider__wrapper swiper-wrapper"
-      :slides-per-view="auto"
       :space-between="20"
-      :watch-overflow="true"
       :navigation="{nextEl: '.next', prevEl: '.prev'}"
       :scrollbar="{el: '.swiper-scrollbar', draggable: true}"
     >

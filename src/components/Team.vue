@@ -196,7 +196,7 @@ export default {
       width: 100%;
       display: flex;
       gap: 20px;
-        @media (max-width: 768px) {
+        @media (max-width: 1112px) {
           flex-direction: column;
           gap: 40px;
         }
@@ -234,10 +234,9 @@ export default {
     }
   }
   .text {
-    // min-width: 430px;
     width: 430px;
     height: auto;
-      @media (max-width: 768px) {
+      @media (max-width: 1112px) {
         width: 100%;
       }
     &__title {
@@ -265,7 +264,7 @@ export default {
     width: calc(100% - 430px - 20px);
     display: flex;
     flex-direction: column;
-      @media (max-width: 768px) {
+      @media (max-width: 1112px) {
         width: 100%;
       }
     &__list {
@@ -277,10 +276,15 @@ export default {
       background-color: #F0F0F0;
       border-radius: 61px;
       margin-bottom: 70px;
-        @media (max-width: 768px) {
+        @media (max-width: 1112px) {
           margin-top: 40px;
+        }
+        @media (max-width: 768px) {
           margin-bottom: 40px;
           width: 335px;
+        }
+        @media (max-width: 360px) {
+          width: 90%;
         }
     }
     &__item {
@@ -314,10 +318,13 @@ export default {
         line-height: 28px;
         text-align: center;
         color: #101020;
-        
           @media (max-width: 768px) {
             font-size: 18px;
             line-height: 21px;
+          }
+          @media (max-width: 360px) {
+            font-size: 12px;
+            line-height: 16px;
           }
       }
     }

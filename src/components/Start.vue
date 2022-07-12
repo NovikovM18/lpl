@@ -108,6 +108,10 @@ export default {
           width: 90%;
           padding: 56px 24px;
         }
+        @media (max-width: 360px) {
+          width: 90%;
+          padding: 36px 14px;
+        }
       &_title {
         font-weight: 700;
         font-size: 72px;
@@ -117,6 +121,10 @@ export default {
           @media (max-width: 768px) {
             font-size: 34px;
             line-height: 39px;
+          }
+          @media (max-width: 360px) {
+            font-size: 22px;
+            line-height: 28px;
           }
       }
       &_p {
@@ -130,6 +138,10 @@ export default {
             font-size: 16px;
             line-height: 20px;
           }
+          @media (max-width: 360px) {
+            font-size: 12px;
+            line-height: 14px;
+          }
       }
       &_bb {
         margin-top: 114px;
@@ -139,6 +151,10 @@ export default {
             margin-top: 40px;
             flex-direction: column;
             gap: 30px;
+          }
+          @media (max-width: 360px) {
+            margin-top: 20px;
+            gap: 20px;
           }
       }
       &_start {
@@ -155,8 +171,14 @@ export default {
         line-height: 28px;
         color: #FBFBFB;
           @media (max-width: 768px) {
+            width: 240px;
             font-size: 20px;
             line-height: 23px;
+          }
+          @media (max-width: 360px) {
+            width: 200px;
+            font-size: 16px;
+            line-height: 22px;
           }
       }
       &_read {
@@ -173,8 +195,14 @@ export default {
         line-height: 28px;
         color: #FBFBFB;
           @media (max-width: 768px) {
+            width: 240px;
             font-size: 20px;
             line-height: 23px;
+          }
+          @media (max-width: 360px) {
+            width: 200px;
+            font-size: 16px;
+            line-height: 22px;
           }
       }
     }

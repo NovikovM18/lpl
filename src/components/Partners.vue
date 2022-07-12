@@ -70,14 +70,14 @@ export default {
     }
     &__content {
       display: flex;
-      @media (max-width: 768px) {
+      @media (max-width: 1090px) {
         flex-direction: column;
         gap: 20px;
       }
     }
   }
   .big {
-    max-width: 860px;
+    max-width: 460px;
     height: auto;
     padding: 30px;
     display: flex;
@@ -87,8 +87,8 @@ export default {
     border: 1px solid #DEDEDE;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-      @media (max-width: 768px) {
-        width: 100%;
+      @media (max-width: 1090px) {
+        max-width: 100%;
       }
     &__info {
       display: flex;
@@ -129,6 +129,7 @@ export default {
       @media (max-width: 768px) {
         width: 100%;
         margin-left: 0;
+        gap: 10px;
       }
     &__item {
       width: 280px;
@@ -142,6 +143,10 @@ export default {
       @media (max-width: 768px) {
         width: 160px;
         height: 100px;
+      }
+      @media (max-width: 360px) {
+        width: 134px;
+        height: 88px;
       }
       &_img {
         width: 90%;
